@@ -1,15 +1,12 @@
 # assembler_team_project
 
 ## Current Instructions:
-javac Assembler_Application.java input.java source_line.java
-java Assembler_Application
-
-## Installation
-
-1) Ensure that java is installed.
-
-1) `javac <name of program>`
-2) `java <name of program>`
+<pre>#Ensure that java is installed.
+git clone https://github.com/pclassoffloading/assembler_team_project.git;
+cd assembler_team_project;
+javac Assembler_Application.java input.java source_line.java;
+java Assembler_Application;
+</pre>
 
 ## Initial Variables:
 <pre>
