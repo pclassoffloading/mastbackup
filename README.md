@@ -1,7 +1,7 @@
 # assembler_team_project
 
 ## Current Instructions:
-javac Assembler_Application.java input.java 
+javac Assembler_Application.java input.java source_line.java
 java Assembler_Application
 
 ## Installation

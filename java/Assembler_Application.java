@@ -1,11 +1,13 @@
+import java.io.IOException;
 import java.util.Scanner;
 //import input.*;
 //import Assembler_Application
 public class Assembler_Application{
 int LOCCTR = 0;
 
-	public static void main(String [] args){ //thows IOException
-		input localStack = new input("output.txt");
+	public static void main(String [] args) throws IOException{ 
+		input dragon = new input("output.txt");
+		source_line frog = new source_line("output.txt");
 	}
 //array_of_sourcelines instantiated by int count = input.count(file )
 //SourceLines[] array_of_sourcelines =  new SourceLines[count];
