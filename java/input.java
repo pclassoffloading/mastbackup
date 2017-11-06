@@ -8,7 +8,7 @@ String filly = "input.txt";
 	public input(String testty) throws IOException{
 
 		this.file1 = readFile(testty);
-		readEachWord(file1);
+
 	}
 
 	public File readFile(String filly) throws IOException{
@@ -19,19 +19,26 @@ String filly = "input.txt";
 		return file1;
 	}
 
-	public void readEachLine(File file1, Scanner fileInput1){
+	public void readEachLine(File file1, Scanner fileInput1)throws IOException{
 		while (fileInput1.hasNext()){
 			//.next();
 			String nextLine = fileInput1.nextLine();
-			System.out.printf("Line who knows! %s\n", nextLine);
+			readEachWord(nextLine);
 		}
 	}
 
 	//TODO: Deliminate using scanner by spaces or tabs...
 	//TODO:
-	public void readEachWord(File trythis) throws IOException{
+	public void readEachWord(String trythis) throws IOException{
+		Scanner s = new Scanner(trythis).useDelimiter("\\s+");
+		while (s.hasNext()){
+			//.next();
+			String word = s.next();
+			System.out.printf("Line who knows! WORD %s\n", word);
+		//.useDelimiter("\\s*fish\\s*");
 
 	}
+}
 }
 
 //import java.io.PrintWriter;

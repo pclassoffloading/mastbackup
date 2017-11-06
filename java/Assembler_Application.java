@@ -7,6 +7,10 @@ int LOCCTR = 0;
 
 	public static void main(String [] args) throws IOException{ 
 		input dragon = new input("output.txt");
+		System.out.println();
+		System.out.println();
+		System.out.println("on to the second file.");
+		input other_dragon = new input("output3.txt");
 		source_line frog = new source_line("output.txt");
 	}
 //array_of_sourcelines instantiated by int count = input.count(file )
