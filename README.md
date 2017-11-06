@@ -1,5 +1,9 @@
 # assembler_team_project
 
+## Current Instructions:
+javac Assembler_Application.java input.java 
+java Assembler_Application
+
 ## Installation
 
 1) Ensure that java is installed.
