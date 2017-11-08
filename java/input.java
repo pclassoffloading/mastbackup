@@ -31,14 +31,19 @@ String filly = "input.txt";
 	//TODO:
 	public void readEachWord(String trythis) throws IOException{
 		Scanner s = new Scanner(trythis).useDelimiter("\\s+");
+		int count = 0;
 		while (s.hasNext()){
 			//.next();
 			String word = s.next();
-			System.out.printf("Line who knows! WORD %s\n", word);
+			System.out.printf("Line who knows! WORD %d%s\n", count, word);
+			count++;
 		//.useDelimiter("\\s*fish\\s*");
 
+		}
 	}
-}
+	public void understand_line_number(){
+		
+	}
 }
 
 //import java.io.PrintWriter;
