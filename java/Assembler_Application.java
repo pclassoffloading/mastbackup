@@ -5,13 +5,27 @@ import java.util.Scanner;
 public class Assembler_Application{
 int LOCCTR = 0;
 
-	public static void main(String [] args) throws IOException{ 
-		input dragon = new input("../ext_files/output.txt");
-		System.out.println();
-		System.out.println();
-		System.out.println("on to the second file.");
-		input other_dragon = new input("../ext_files/output3.txt");
-		source_line frog = new source_line("../ext_files/output.txt");
+	public static void main(String [] args) throws IOException{
+		System.out.println("on to the first file.");
+		input dragon0 = new input(loc("input.txt"));
+//		System.out.println("on to the second file.");
+//		input other_dragon = new input(loc("input3.txt"));
+
+		System.out.println("on to the mnumonic file.");
+		input dragon1 = new input(loc("nemonic_info.txt"));
+		System.out.println("on to the format file.");
+		input dragon2 = new input(loc("format_info.txt"));
+		System.out.println("on to the opcode_info file.");
+		input dragon3 = new input(loc("opcode_info.txt"));
+//		System.out.println("on to the first file.");
+//		input dragon4 = new input(loc("apndx_eff_and_note_incldd.txt"));
+
+
+		System.out.println("on to the source_line.");
+		source_line frog = new source_line(loc("output.txt"));
+	}
+	public static String loc(String text){
+		return "../ext_files/".concat(text);
 	}
 //array_of_sourcelines instantiated by int count = input.count(file )
 //SourceLines[] array_of_sourcelines =  new SourceLines[count];
