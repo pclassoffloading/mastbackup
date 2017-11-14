@@ -4,10 +4,11 @@ class DataItem{
    String formatN;
     
 
-   public DataItem(String mnumonic, String opcode, String formatN){
+   public DataItem(String mnumonic, String formatN, String opcode){
       this.mnumonic = mnumonic;
-      this.opcode = opcode;
       this.formatN = formatN;
+      this.opcode = opcode;
+      
    }//constructor DataItem
  
    public void printDataItem(){
@@ -19,6 +20,18 @@ class DataItem{
  
    public String getKey(){
       return mnumonic;
+   }
+   
+   public String getmnuonic(){
+      return mnumonic;
+   }
+   
+   public String getOpcode(){
+      return opcode;
+   }
+   
+   public String getFormatN(){
+      return formatN;
    }
  
  
