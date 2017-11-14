@@ -1,3 +1,25 @@
+// public class testingOptab {
+//     
+//    public static void main(String args[]){
+//    SYMTAB symTable = new SYMTAB();
+//    
+//    symTable.createSymItem("DRESSER", "1000");
+//    symTable.createSymItem("HAPPY", "1200");
+//    symTable.createSymItem("CREATE", "4334");
+//    symTable.createSymItem("ALPHA", "4334");
+//    symTable.createSymItem("OMEGA", "4334");
+//    symTable.createSymItem("OMEGA", "4334");
+//    symTable.createSymItem("OMEGA", "4334");
+// 
+//    
+//    symTable.displayTable();
+//      
+//          
+//    }//main
+// }//testingOptab
+
+
+
 class SymItem{
    String label;
    String address;
