@@ -54,27 +54,6 @@ class OPTAB
       }//for
    
    }//constuctor OPTAB
-   public void displayTable()
-   {
-      String header = "Index  String    Probe-Length\n";
-      String row = "%-7d%-20s%-3d\n";
-      float probeSum = 0;
-      int numItems = 0;
-      
-      System.out.println("\nOPTAB");
-      System.out.print(header);
-      for(int j=0; j < arraySize; j++)
-      {
-         if(OPARRAY[j] != null && OPARRAY[j].getKey() != "-1")
-         {
-            System.out.print(String.format(row, j, OPARRAY[j].getKey(), findProbeLength(OPARRAY[j].getKey())));
-            probeSum += findProbeLength(OPARRAY[j].getKey());
-            numItems++;
-         }
-      }
-      System.out.println("Ave Probe Length: " + probeSum/numItems);
-   }//displayTable
-   
    
    
    public void insert(DataItem item)
@@ -126,49 +105,6 @@ class OPTAB
       return null; //couldn't find it
    }//find
    
-   
-   public int findProbeLength(String key)
-   {
-      int hashVal = hashFunc(key);
-      int probeLength = 1;//initialize to 1
-      int k = 0;
-   
-      while(OPARRAY[hashVal] != null)
-      {
-         if(OPARRAY[hashVal].getKey().equals(key))
-            return probeLength;
-         //quadratic probe
-         hashVal += (2*k+1);
-         ++k;
-         ++probeLength;//increase probeLength
-         hashVal %= arraySize; //wraparound
-      
-      }//while
-      return probeLength; //couldn't find it
-   }//find
-   
-   
-   public DataItem delete(String key)
-   {
-      int hashVal = hashFunc(key);
-      int k = 0;
-   
-      while(OPARRAY[hashVal] != null)
-      {
-         if(OPARRAY[hashVal].getKey().equals(key))
-         {
-            DataItem temp = OPARRAY[hashVal];
-            OPARRAY[hashVal] = nonItem;
-            return temp;
-         }
-         //quadratic probe
-         hashVal += (2*k+1);
-         ++k;
-         //wraparound
-         hashVal %= arraySize;
-      }
-      return null;
-   }//delete
    
 
    public static int getPrime(int min)
