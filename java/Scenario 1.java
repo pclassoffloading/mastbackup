@@ -53,7 +53,7 @@
 //
 // PC register will be set to the next line address so we will need to figure out how best to approach that
 // PC = next sourceline.getAddress
-// in this case PC = 0003 knnj
+// in this case PC = 0003
 //
 // Next we need to determine the format number of the operation/mnumonic
 // We do this by looking at OPTAB
