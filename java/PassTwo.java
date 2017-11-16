@@ -2,36 +2,49 @@
 //
 //Pass 2
 //
-// for each sourceline
-//    get LOCCTR
-//    operation = sourceline.getMnumonic
-//    if operation exists in OPTAB (i.e. ADD, STA, etc)
-//    if(OPTAB.find(operation) != Null)
-//       grap opcode
-//       opcode = OPTAB.find(operation).getOpcode;
-//       
-//       get format
-//       format = sourceline.getFormat
-//
-//       switch(format):
-//
-//          case: 2
-//
-//          case: 3
+class Pass2{
+
+public String opjectCode;
+
+   public void Pass2(sourceline[] sourcelines){
+      // for each sourceline
+      for(int i = 0; i < sourcelines.length(); i++){
+
+      //    get LOCCTR -- public class variable
+
+         String operation = sourcelines[i].getMnumonic;
+         //if operation exists in OPTAB (i.e. ADD, STA, etc)
+         if(OPTAB.find(operation) != Null){
+         //grap opcode
+            opcode = OPTAB.find(operation).getOpcode;      
+            //get format
+            String format = sourcelines[i].getFormat;
+
+            switch(format):
+            case "1":
+               objectCode = opcode;
+               break;
+            case "2":
+               break;
+            case "3/4":
+                  //if is three
+                  if(!(sourcelines[i].isFour)){
 //                First try PC mode
 //                if PC mode fail
 //                   try BASE mode
 //                      if BASE mode fail
 //                         fail source line, print error "format 4 needed for instruction"
-//
-//          case 4:
-//                find target address
-//                targetAddress = (SYMTAB.find(sourceLine.getSymbol)).getAddress
+                  }//if is three
+
+                  //if is four
+                  else{
+                  //find target address
+                  String targetAddress = (SYMTAB.find(sourceLine.getSymbol)).getAddress;
 //                object code = opject code and target address
 //                format of object code is four bytes: ## ## ## ##
 //                first two bytes is opcode code
 //                last four bytes are target address
-//
+                  }//if is four
 //          default:
 //                  should not reach here
 //
