@@ -40,13 +40,14 @@ public String opjectCode;
                   else{
                   //find target address
                   String targetAddress = (SYMTAB.find(sourceLine.getSymbol)).getAddress;
-//                object code = opject code and target address
+//                object code = opject code cancatanated with the target address
 //                format of object code is four bytes: ## ## ## ##
 //                first two bytes is opcode code
 //                last four bytes are target address
                   }//if is four
 //          default:
 //                  should not reach here
+//                  if it does, throw error
 //
 //
 //         write object code to text file
