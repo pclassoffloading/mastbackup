@@ -51,3 +51,19 @@ public String opjectCode;
 //
 //
 //         write object code to text file
+
+   public void PCMODE(){
+      char n,i,x,b,p,e;
+      String label = sourceline.getLabel;
+      //check if label is constant
+      if(label.charAt(0) == '#'){
+      //is immiedate direct addressing
+      
+      }
+      //check if label is indirect addressing
+      else if(label.charAt(0) == "@"){
+      }
+      //else label should be in symtab
+      else{
+      }
+}
