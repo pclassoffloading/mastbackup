@@ -4,7 +4,9 @@
 //
 class Pass2{
 
-public String opjectCode;
+public String opjectCode; //what this class should return to main
+public String n,i,x,b,p,e; //nixbpe bits used for format 3/4 instructions
+
 
    public void Pass2(sourceline[] sourcelines){
       // for each sourceline
@@ -29,6 +31,7 @@ public String opjectCode;
             case "3/4":
                   //if is three
                   if(!(sourcelines[i].isFour)){
+                  e = "0";
 //                First try PC mode
 //                if PC mode fail
 //                   try BASE mode
@@ -38,11 +41,14 @@ public String opjectCode;
 
                   //if is four
                   else{
+                  e = "1";
                   //find target address
                   String targetAddress = (SYMTAB.find(sourceLine.getSymbol)).getAddress;
 //                object code = opject code cancatanated with the target address
 //                format of object code is four bytes: ## ## ## ##
-//                first two bytes is opcode code
+//                first six bits is opcode code
+//                next six bits is nixbpe
+//                next 20 bits are address
 //                last four bytes are target address
                   }//if is four
 //          default:
@@ -53,12 +59,14 @@ public String opjectCode;
 //         write object code to text file
 
    public void PCMODE(){
-      char n,i,x,b,p,e;
       String label = sourceline.getLabel;
       //check if label is constant
       if(label.charAt(0) == '#'){
       //is immiedate direct addressing
-      
+      n = "0";
+      i = "1";
+      b = "0";
+      p = "0";
       }
       //check if label is indirect addressing
       else if(label.charAt(0) == "@"){
