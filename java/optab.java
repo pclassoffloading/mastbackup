@@ -1,7 +1,7 @@
 class DataItem{
-   String mnumonic;
-   String opcode;
-   String formatN;
+   public String mnumonic;
+   public String opcode;
+   public String formatN;
     
 
    public DataItem(String mnumonic, String formatN, String opcode){
@@ -19,19 +19,19 @@ class DataItem{
    }
  
    public String getKey(){
-      return mnumonic;
+      return this.mnumonic;
    }
    
-   public String getmnuonic(){
-      return mnumonic;
+   public String getMnumonic(){
+      return this.mnumonic;
    }
    
    public String getOpcode(){
-      return opcode;
+      return this.opcode;
    }
    
    public String getFormatN(){
-      return formatN;
+      return this.formatN;
    }
  
  
