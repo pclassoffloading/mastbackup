@@ -24,29 +24,45 @@ source_line[] sourcelines;
 		}
 		fileInput1.close();
 	}
+	
+	public int countFile(Scanner fileInput0){
+		int count = 0;
+		while (fileInput0.hasNext()){
+			fileInput0.nextLine();
+			count++;
+		}
+		return count;
+	}
 
 	public void readEachWord(String trythis) throws IOException{
 		Scanner s = new Scanner(trythis).useDelimiter("\\s+");
-		count_words(s);
-		build_sourcelines(s);
+		int num_words = count_words(s);s = new Scanner(trythis).useDelimiter("\\s+");
+
+		build_sourcelines(s, num_words);
 	}
 
-	public void build_sourcelines(Scanner s){
-		int count = 0;
-		while (s.hasNext()){
-			String word = s.next();
-			count++;
-		}
-	}
 	public int count_words(Scanner s){
 		int count = 0;
 		while (s.hasNext()){
 			String word = s.next();
 			System.out.printf("Line who knows! WORD %d%s\n", count, word);
 			count++;
-		}s.reset();return count;
+		}
+			count--;
+			System.out.printf("Line who knows! WORD %d\n", count);
+		return count;
 	}
-	public void understand_word_number(int t, Scanner s){
 
+	public void build_sourcelines(Scanner s, int num_words){
+		int count = 0;
+		while (s.hasNext()){
+			String word = s.next();
+			count++;
+//			System.out.printf("Line who knows! WORD %d is the num of %s\n", num_words, word);
+		}
+	}
+
+	public void understand_word_number(int t, Scanner s){
+		
 	}
 }
