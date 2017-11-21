@@ -1,3 +1,4 @@
+for windows people ... `C:\Program Files\Java\jdk1.7.0_02\bin`
 # assembler_team_project
 
 ## Current Instructions:
